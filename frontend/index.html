@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+        <title>Money Tracker App</title>
+    </head>    
+<body>
+    <div class="container">
+        <h1>Money Tracker</h1>
+        <div class="form-container">
+            <form id="transaction-form">
+                <select id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </div>
+        <div class="transactions-container">
+            <h2>Transactions</h2>
+            <ul id="transactions-list"></ul>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
