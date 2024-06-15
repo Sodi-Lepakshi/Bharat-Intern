@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="form-content">
+                <div id="form-toggle">
+                    <h2 id="form-title">Login</h2>
+                    <form id="login-form" action="/login" method="POST">
+                        <div class="input-box">
+                            <input type="email" name="email" required>
+                            <label for="email">Enter your email</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="password" required>
+                            <label for="password">Enter your password</label>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <div class="forgot">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <div class="toggle">
+                            <p>Don't have an account? <a href="#" id="show-register">Signup now</a></p>
+                        </div>
+                    </form>
+
+                    <form id="register-form" action="/register" method="POST" style="display: none;">
+                        <div class="input-box">
+                            <input type="text" name="name" required>
+                            <label for="name">Enter your name</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" name="email" required>
+                            <label for="email">Enter your email</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="password" required>
+                            <label for="password">Enter your password</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="confirmPassword" required>
+                            <label for="confirmPassword">Confirm your password</label>
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="toggle">
+                            <p>Already have an account? <a href="#" id="show-login">Login here</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="image-content">
+                <img src="https://scontent.fbbi2-2.fna.fbcdn.net/v/t1.6435-9/77394468_107283264083298_8423035895204020224_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=_NyAhl3A9QsQ7kNvgHniFxp&_nc_ht=scontent.fbbi2-2.fna&oh=00_AYBqglbNkgZWNpXiiNaJF3DllERtDHWRnPHlUjxfAum7ow&oe=6693454A" alt="Image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const showRegister = document.getElementById('show-register');
+        const showLogin = document.getElementById('show-login');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+        const formTitle = document.getElementById('form-title');
+
+        showRegister.addEventListener('click', () => {
+            loginForm.style.display = 'none';
+            registerForm.style.display = 'block';
+            formTitle.textContent = 'Register';
+        });
+
+        showLogin.addEventListener('click', () => {
+            registerForm.style.display = 'none';
+            loginForm.style.display = 'block';
+            formTitle.textContent = 'Login';
+        });
+    </script>
+</body>
+</html>

@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "money-tracker-app",
+=======
+  "name": "registration-form",
+>>>>>>> dee8a56fb8b168a7f0f4f9747b6c95fe1831ccfe
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,10 +14,18 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+<<<<<<< HEAD
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+=======
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+>>>>>>> dee8a56fb8b168a7f0f4f9747b6c95fe1831ccfe
     "mongoose": "^8.4.1"
   }
 }

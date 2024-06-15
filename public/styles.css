@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    overflow: hidden;
+    width: 700px;
+}
+
+.form-content, .image-content {
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-content {
+    background-color: #f1f1f1;
+    text-align: center;
+    position: relative;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto;
+}
+
+.image-content p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    font-size: 16px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: #f9f9f9;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+    left: 10px;
+    color: #6a11cb;
+    font-size: 12px;
+}
+
+.btn {
+    width: 100%;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+.forgot, .toggle {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot a, .toggle a {
+    color: #6a11cb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot a:hover, .toggle a:hover {
+    color: #2575fc;
+}
